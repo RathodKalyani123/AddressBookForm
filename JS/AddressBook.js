@@ -7,7 +7,7 @@ class Contact {
     this._id = id;
   }
 
-  //1st validation: User's Name
+  
   get name() {
     return this._name;
   }
@@ -20,12 +20,12 @@ class Contact {
     }
   }
 
-  //2nd validation: User's Home Address
+  
   get address() {
     return this._address;
   }
   set address(address) {
-    let addressRegex = RegExp("[\w',-\\/.\s]");    //for ex. More than two words including any type of caracters
+    let addressRegex = RegExp("[\w',-\\/.\s]");    
     if (addressRegex.test(address)) {
       this._address = address;
     } else {
@@ -49,33 +49,33 @@ class Contact {
 
 
   
-  get zipcode() {
-    return this._zipcode;
+  get zip() {
+    return this._zip;
   }
-  set zipcode(zipcode) {
-    let zipcodeRegex = RegExp("^[0-9]{3}\\s{0,1}[0-9]{3}$");  
-    if (zipcodeRegex.test(pin)){
-      this._zipcode = zipcode;
+  set zip(zip) {
+    let zipRegex = RegExp("^[0-9]{3}\\s{0,1}[0-9]{3}$");  
+    if (zipRegex.test(zip)){
+      this._zip = zip;
     } else {
-      throw "Invalid Pincode."
+      throw "Invalid zip code."
     }
   }
 
-  get phone(){
-    return this._phone;
+  get phoneNumber(){
+    return this._phoneNumber;
   }
-  set phone(phone){
-  let phoneRegex = RegExp("^[0-9]{2}\\s{1}[7-9]{1}[0-9]{9}$");   //for ex. 91 9049331047
-  if (phoneRegex.test(phone)){
-    this._phone = phone;
+  set phoneNumbber(phoneNumber){
+  let phoneNumberRegex = RegExp("^[0-9]{2}\\s{1}[7-9]{1}[0-9]{9}$");   //for ex. 91 9049331047
+  if (phoneNumberRegex.test(phoneNumber)){
+    this._phoneNumber = phoneNumber;
   } else {
     throw "Invalid Phone Number";
   }
   }
 
-  //UC  6 User Entries On Clicking sunbmit button
+  /*UC7 User Entries On Clicking sunbmit button*/
   toString(){
-    return "Id = " + this.id +  ",  \nName = " + this.name + ",  \nAddress = " + this.address + ", \nPhone = " + this.phone + ", \nCity = " + this.city + ", \nState = " + this.state + ", \nPin = " + this.pin;
+    return "Id = " + this.id +  ",  \nName = " + this.name + ",  \nAddress = " + this.address + ", \nPhoneNumber = " + this.phoneNumber + ", \nCity = " + this.city + ", \nState = " + this.state + ", \nzip = " + this.zip;
   }
 
 }
