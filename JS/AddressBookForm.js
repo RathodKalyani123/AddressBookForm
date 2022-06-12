@@ -55,12 +55,12 @@
   });
 });
 
-// UC 5 - Reset button
+/* UC5 Reset button*/
 function resetForm() {
 alert("The form will reset");
 }
 
-//on click function - Submit button
+/*uc6-on click function - Submit button*/
 function save() {
 
 let contact = new Contact();                      
