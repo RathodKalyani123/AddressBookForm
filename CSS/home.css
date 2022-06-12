@@ -28,9 +28,26 @@ body {
 .logo-content-img {
     border: 0px solid #42515f;
 }
+
+.per-text {
+    font: normal normal bold 20px/25px Montserrat;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0px;
+    color: #82A70C;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.per-Details {
+    color: #42515f;
+}
+
 *{
     box-sizing: border-box;
 }
+
+/*uc2*/
+
 .main-content{
     display: flex;
     flex-direction: column;
@@ -79,4 +96,62 @@ body {
     outline: none;
     cursor: pointer;
     text-decoration: none;
+}
+
+/* UC 3Tabular Format  */
+
+.table-main {
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    min-width: 800px;
+}
+
+td, th {
+    text-align: left;
+    padding: 5px 8px;
+    font-family: Montserrat;
+}
+
+th {
+    background: #42515f 0% 0% no-repeat padding-box;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 1;
+    padding: 15px 8px;
+}
+
+tr:not(:first-child) {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+}
+
+td {
+    font: normal normal normal 14px/21px Montserrat;
+    letter-spacing: 0px;
+    color: #3d3d3d;
+    opacity: 1;
+    font-weight: 600;
+}
+
+td:first-child {
+    display: flex;
+    align-items: center;
+}
+
+td img:first-child {
+    margin-right: 20px;
+}
+
+td img {
+    cursor: pointer;
 }
