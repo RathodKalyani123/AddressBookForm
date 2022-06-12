@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   validateZipcode();
   ValidatePhoneNumber();
 });
+//uc7 populate the address book
  const ValidateName = () => {     
           const name = document.querySelector("#name");
           name.addEventListener("input", function () {
@@ -70,7 +71,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
       });
   };
-  
+  //uc8 store data in local storage
   const save= ()=> {
     try {
       let contact = createContact();
